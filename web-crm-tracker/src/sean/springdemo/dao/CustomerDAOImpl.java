@@ -18,7 +18,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	@Transactional
+//	@Transactional - Commented as the Transactions would now begin at the service layer. The Service Layer will determine the scope of the Transactions depending on the DAO's that get invoked inside the Layer
 	public List<Customer> getCustomers() {
 		
 //		Get the current Hibernate Session
